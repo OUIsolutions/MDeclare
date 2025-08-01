@@ -7,8 +7,87 @@
 
     CTextStack *final_content  = newCTextStack_string_empty();
     long size = strlen(content);
+    
+    int bracket_count = 0;
+    bool inside_string = false;
+    bool inside_char = false;
+    bool inside_comment = false;
+    bool inside_multiline_comment = false;
+    bool inside_preprocessor = false;
+    bool inside_macro = false;
+
     for(int i =0; i < size;i++){
+        char current_char = content[i];
+
         
+        if(inside_comment){
+            if(current_char == '\n'){
+                inside_comment = false;
+            }
+        }
+
+        if(inside_multiline_comment){
+            if(current_char == '*' && i + 1 < size && content[i + 1] == '/'){
+                inside_multiline_comment = false;
+            }
+        }
+
+        if(inside_string){
+            if(current_char == '"'){
+             inside_string = false;
+            }
+        }
+
+        if(inside_char){
+            if(current_char == '\''){
+                inside_char = false;
+            }
+        }
+
+        if(inside_preprocessor){
+            if(current_char == '\n'){
+                inside_preprocessor = false;
+            }
+        }
+
+ 
+        bool normal_scope =  !inside_string && !inside_char && !inside_comment && !inside_multiline_comment && !inside_preprocessor;
+
+        if (normal_scope){
+
+            if (current_char == '{'){
+                bracket_count++;
+            } else if (current_char == '}'){
+                bracket_count--;
+            }
+
+            if(current_char == '/' && i + 1 < size && content[i + 1] == '/'){
+                inside_comment = true;
+            }
+
+            if(current_char == '/' && i + 1 < size && content[i + 1] == '*'){
+                inside_multiline_comment = true;
+            }
+
+            if(current_char == '"'){
+                inside_string = true;
+            } 
+            if(current_char == '\'' ){
+                inside_char = true;
+            } 
+            if(current_char == '#' ){
+                inside_preprocessor = true;
+            } 
+        }
+    
+        if(bracket_count == 0 && current_char != '}'){
+            CTextStack_format(final_content,"%c", current_char);
+        }
+        if(bracket_count == 0 && current_char == '}'){
+            CTextStack_format(final_content,";");
+        }
+
     }
+
     return CTextStack_self_transform_in_string_and_self_clear(final_content);
 }
