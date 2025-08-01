@@ -13,7 +13,7 @@ function amalgamation_build()
     darwin.dtw.write_file("release/MDeclare.c", runtime)
 
     local api_one = darwin.camalgamator.generate_amalgamation("src/imports/imports.api_define.h")
-    darwin.dtw.write_file("release/MDeclareApiOne.h", api_one)
+    darwin.dtw.write_file("release/MDeclareApiOne.c", api_one)
 
     local max_content = darwin.camalgamator.ONE_MB * 10
     local max_recursion = 100

@@ -130,8 +130,8 @@ int divide(int a, int b);
 | 📁 **File** | 🎯 **Purpose** |
 |-------------|---------------|
 | [⚡ MDeclare.c](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.c) | Single-file source code |
-| [📚 MDeclareApiOne.h](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclareApiOne.h) | API header for integration |
-| [🔧 CAmalgamatorApiNoDependenciesIncluded.h](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/CAmalgamatorApiNoDependenciesIncluded.h) | Amalgamator API |
+| [📚 MDeclareApiOne.c](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclareApiOne.h) | API full for integration |
+| [🔧 MDeclareApiNoDependenciesIncluded.h](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclareApiNoDependenciesIncluded.h) | Amalgamator API |
 
 ### ⚡ Quick Installation
 
@@ -353,7 +353,7 @@ mdeclare functions.c -o functions.h
 **Download the API header file:**
 ```bash
 # Get the complete API (easiest way)
-curl -L https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclareApiOne.h -o MDeclareApiOne.h
+curl -L https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclareApiOne.h -o MDeclareApiOne.c
 ```
 
 ### 🎬 Simple Example (Transform a Single File!)
