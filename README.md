@@ -130,7 +130,7 @@ int divide(int a, int b);
 | 📁 **File** | 🎯 **Purpose** |
 |-------------|---------------|
 | [⚡ MDeclare.c](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.c) | Single-file source code |
-| [📚 MDeclareApiOne.c](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclareApiOne.h) | API full for integration |
+| [📚 MDeclareApiOne.c](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclareApiOne.c) | API full for integration |
 | [🔧 MDeclareApiNoDependenciesIncluded.h](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclareApiNoDependenciesIncluded.h) | Amalgamator API |
 
 ### ⚡ Quick Installation
