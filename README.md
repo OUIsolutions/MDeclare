@@ -119,7 +119,6 @@ int divide(int a, int b);
 | 🖥️ **Platform** | 📦 **Download** | 📝 **Description** |
 |------------------|----------------|-------------------|
 | 🐧 **Linux** | [MDeclare.out](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.out) | Ready-to-run executable |
-| 🪟 **Windows 64-bit** | [MDeclare64.exe](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare64.exe) | Windows executable |
 | 🪟 **Windows 32-bit** | [MDeclarei32.exe](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclarei32.exe) | Windows executable |
 | � **Ubuntu/Debian** | [MDeclare.deb](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.deb) | DEB package |
 | � **RHEL/Fedora** | [MDeclare.rpm](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.rpm) | RPM package |
