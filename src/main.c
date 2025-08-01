@@ -60,7 +60,7 @@ int main(int argc, char *argv[]){
         bool include_path = CArgvParse_is_flags_present(&args,INCLUDE_PATH,sizeof(INCLUDE_PATH)/sizeof(char*));
 
 
-        char *result = transform_dir(entrie, output,include_path, starts_with, ends_with);
+        char *result = transform_dir(entrie,include_path, starts_with, ends_with);
         dtw_write_string_file_content(output, result);
         free(result);
     }

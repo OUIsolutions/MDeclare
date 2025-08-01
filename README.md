@@ -428,22 +428,32 @@ void print_hello();
 int main() {
     // Directory settings
     const char *source_dir = "src/";           // Where your C files are
-    const char *output_file = "headers.h";    // Where to save headers
-    bool include_paths = true;                 // Add file path comments
+    bool include_path = true;                  // Add file path comments
     const char *starts_with = NULL;           // Filter: files starting with...
     const char *ends_with = ".c";             // Filter: files ending with...
     
     // Process the entire directory! ✨
-    char *result = transform_dir(source_dir, output_file, include_paths, starts_with, ends_with);
+    char *result = transform_dir(source_dir, include_path, starts_with, ends_with);
     
     if (result == NULL) {
         printf("❌ Oops! Something went wrong processing the directory!\n");
         return 1;
     }
     
+    // Write the result to a file
+    FILE *output_file = fopen("headers.h", "w");
+    if (output_file == NULL) {
+        printf("❌ Failed to create output file!\n");
+        free(result);
+        return 1;
+    }
+    fprintf(output_file, "%s", result);
+    fclose(output_file);
+    
     // Success! Print the combined headers
     printf("✅ Success! Processed directory '%s'\n", source_dir);
-    printf("📄 Generated headers:\n\n%s", result);
+    printf("📄 Generated headers saved to 'headers.h'\n");
+    printf("Preview:\n\n%s", result);
     
     // Clean up memory (important!)
     free(result);
@@ -458,7 +468,7 @@ int main() {
 | 🔧 **Function** | 📝 **What It Does** | 💡 **Example** |
 |-----------------|-------------------|----------------|
 | `mdeclare_transform_content(content)` | Transform C code to header declarations | For single files or code strings |
-| `transform_dir(dir, output, include_path, starts_with, ends_with)` | Process entire directories | For batch processing multiple files |
+| `transform_dir(dir_path, include_path, starts_with, ends_with)` | Process entire directories | For batch processing multiple files |
 
 ### 🚨 Important Notes for Beginners:
 
