@@ -3,7 +3,7 @@
 #include "../../imports/imports.api_declare.h"
 //silver_chain_scope_end
 
-char * transform_dir(const char *dir_path, const char *output_path,const char *starts_with,const char *ends_with) {
+char * transform_dir(const char *dir_path, const char *output_path,bool include_path, const char *starts_with,const char *ends_with) {
 
      CTextStack *final_content = newCTextStack_string_empty();
 
@@ -25,7 +25,9 @@ char * transform_dir(const char *dir_path, const char *output_path,const char *s
                 continue;
             }
         }
-        CTextStack_format(final_content, "//%s\n", current_file);
+        if(include_path){
+             CTextStack_format(final_content, "//%s\n", current_file);
+        }
         char *concatenated = dtw_concat_path(dir_path, current_file);
         char *content = dtw_load_string_file_content(concatenated);
         free(concatenated);

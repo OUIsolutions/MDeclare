@@ -61,9 +61,10 @@ transform a dir
     // transform a dir 
     const char *dir_path = "src/api/transform_content";
     const char *output = "target.h";
+    bool include_path = true; // Include the path in the output
     const char *starts_with = NULL;
     const char *ends_with = ".c";
-    char *result = transform_dir(dir_path, output, starts_with, ends_with);
+    char *result = transform_dir(dir_path, output, include_path, starts_with, ends_with);
 ```
 
 
