@@ -39,6 +39,15 @@ int main(int argc, char *argv[]){
         free(content);
         free(result);
     }
+    if(entrie_type == DTW_FOLDER_TYPE){
+        const char  *STARTS_WITH[] = {"starts_with","sw"};
+        const char *starts_with = CArgvParse_get_flag(&args,STARTS_WITH,sizeof(STARTS_WITH)/sizeof(char*),0);
+        const char  *ENDS_WITH[] = {"ends_with","ew"};
+        const char *ends_with = CArgvParse_get_flag(&args,ENDS_WITH,sizeof(ENDS_WITH)/sizeof(char*),0);
+        char *result = transform_dir(entrie, output, starts_with, ends_with);
+        dtw_write_string_file_content(output, result);
+        free(result);
+    }
 
 
 
