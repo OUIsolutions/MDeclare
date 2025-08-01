@@ -110,55 +110,43 @@ int divide(int a, int b);
 
 ---
 
-## 📥 Download & Installation (Choose Your Adventure!)
+## 📥 Download & Installation
 
-> **🚨 Total Beginner?** Start with the "🎮 Super Easy Download" section below!
-
-### 🎮 Super Easy Download (No Compilation Needed!)
-
-**Just want to use it RIGHT NOW?** Download the ready-to-run version for your computer:
+### 🚀 Quick Downloads (Choose Your Platform)
 
 <div align="center">
 
-| 🖥️ **Your Computer** | 📦 **Download This** | 🏃‍♂️ **How to Use** |
-|---------------------|---------------------|---------------------|
-| 🐧 **Linux** | [MDeclare.out](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.out) | Download → Make executable → Run! |
-| 🪟 **Windows (64-bit)** | [MDeclare64.exe](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare64.exe) | Download → Double-click → Use! |
-| 🪟 **Windows (32-bit)** | [MDeclare32.exe](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare32.exe) | Download → Double-click → Use! |
+| 🖥️ **Platform** | 📦 **Download** | 📝 **Description** |
+|------------------|----------------|-------------------|
+| 🐧 **Linux** | [MDeclare.out](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.out) | Ready-to-run executable |
+| 🪟 **Windows 64-bit** | [MDeclare64.exe](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare64.exe) | Windows executable |
+| 🪟 **Windows 32-bit** | [MDeclarei32.exe](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclarei32.exe) | Windows executable |
+| � **Ubuntu/Debian** | [MDeclare.deb](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.deb) | DEB package |
+| � **RHEL/Fedora** | [MDeclare.rpm](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.rpm) | RPM package |
 
 </div>
 
-### 🚀 Super Quick Installation (Copy & Paste!)
+### 🧑‍💻 Developer Resources
 
-**🐧 Linux Users (Easiest Way Ever!):**
+| 📁 **File** | 🎯 **Purpose** |
+|-------------|---------------|
+| [⚡ MDeclare.c](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.c) | Single-file source code |
+| [📚 MDeclareApiOne.h](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclareApiOne.h) | API header for integration |
+| [🔧 CAmalgamatorApiNoDependenciesIncluded.h](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/CAmalgamatorApiNoDependenciesIncluded.h) | Amalgamator API |
+
+### ⚡ Quick Installation
+
+**Linux:**
 ```bash
-# Just copy and paste this into your terminal!
-curl -L https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.out -o mdeclare
-chmod +x mdeclare
-
-# Now you can use it like this:
-./mdeclare --help
+# Download and make executable
+curl -L https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.out -o mdeclare && chmod +x mdeclare
 ```
 
-**🐧 Ubuntu/Debian Users (Even Easier!):**
+**Ubuntu/Debian:**
 ```bash
-# Download the package
-wget https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.deb
-
-# Install it (you'll need to enter your password)
-sudo dpkg -i MDeclare.deb
-
-# Now it's installed system-wide! Use it anywhere:
-mdeclare --help
+# Install DEB package
+wget https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.deb && sudo dpkg -i MDeclare.deb
 ```
-
-### 🧑‍💻 Advanced Downloads (For Developers)
-
-| 📁 **File** | 🎯 **Best For** | 📝 **Description** |
-|-------------|-----------------|-------------------|
-| [⚡ MDeclare.c](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.c) | Developers who want to compile | Complete source code |
-| [📚 MDeclareApiOne.h](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclareApiOne.h) | Use in your C programs | Full API library |
-| [📦 MDeclare.rpm](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.rpm) | Fedora/RHEL/CentOS | RPM package |
 
 ---
 
