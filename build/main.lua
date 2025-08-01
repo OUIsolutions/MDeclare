@@ -42,10 +42,10 @@ function main()
         end
     end
 
-    darwin.dtw.move_any_overwriting("release/alpine_static_bin.out","release/CAmalgamator.out")
-    darwin.dtw.move_any_overwriting("release/windows64.exe","release/CAmalgamator64.exe")
-    darwin.dtw.move_any_overwriting("release/windowsi32.exe","release/CAmalgamatori32.exe")
-    darwin.dtw.move_any_overwriting("release/debian_static.deb","release/CAmalgamator.deb")
-    darwin.dtw.move_any_overwriting("release/rpm_static_build.rpm","release/CAmalgamator.rpm")
+    darwin.dtw.move_any_overwriting("release/alpine_static_bin.out","release/MDeclare.out")
+    darwin.dtw.move_any_overwriting("release/windows64.exe","release/MDeclare64.exe")
+    darwin.dtw.move_any_overwriting("release/windowsi32.exe","release/MDeclarei32.exe")
+    darwin.dtw.move_any_overwriting("release/debian_static.deb","release/MDeclare.deb")
+    darwin.dtw.move_any_overwriting("release/rpm_static_build.rpm","release/MDeclare.rpm")
 
 end
