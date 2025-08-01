@@ -15,10 +15,8 @@
     bool inside_multiline_comment = false;
     bool inside_preprocessor = false;
     bool inside_macro = false;
-    
     for(int i =0; i < size;i++){
         char current_char = content[i];
-
         
         if(inside_comment){
             if(current_char == '\n'){
@@ -33,7 +31,7 @@
         }
 
         if(inside_string){
-            if(current_char == '"'){
+            if(current_char == '"' && i > 0 && content[i - 1] != '\\'){
              inside_string = false;
             CTextStack_format(final_content,"\"");
             continue;
@@ -42,7 +40,7 @@
         }
 
         if(inside_char){
-            if(current_char == '\''){
+            if(current_char == '\'' && i > 0 && content[i - 1] != '\\'){
                 inside_char = false;
                 CTextStack_format(final_content,"'");
                 continue;
