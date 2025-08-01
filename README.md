@@ -122,9 +122,9 @@ int divide(int a, int b);
 
 | 🖥️ **Your Computer** | 📦 **Download This** | 🏃‍♂️ **How to Use** |
 |---------------------|---------------------|---------------------|
-| 🐧 **Linux** | [MDeclare.out](https://github.com/OUIsolutions/MDeclare/releases/download/0.0.3/MDeclare.out) | Download → Make executable → Run! |
-| 🪟 **Windows (64-bit)** | [MDeclare64.exe](https://github.com/OUIsolutions/MDeclare/releases/download/0.0.3/MDeclare64.exe) | Download → Double-click → Use! |
-| 🪟 **Windows (32-bit)** | [MDeclare32.exe](https://github.com/OUIsolutions/MDeclare/releases/download/0.0.3/MDeclare32.exe) | Download → Double-click → Use! |
+| 🐧 **Linux** | [MDeclare.out](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.out) | Download → Make executable → Run! |
+| 🪟 **Windows (64-bit)** | [MDeclare64.exe](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare64.exe) | Download → Double-click → Use! |
+| 🪟 **Windows (32-bit)** | [MDeclare32.exe](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare32.exe) | Download → Double-click → Use! |
 
 </div>
 
@@ -133,7 +133,7 @@ int divide(int a, int b);
 **🐧 Linux Users (Easiest Way Ever!):**
 ```bash
 # Just copy and paste this into your terminal!
-curl -L https://github.com/OUIsolutions/MDeclare/releases/download/0.0.3/MDeclare.out -o mdeclare
+curl -L https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.out -o mdeclare
 chmod +x mdeclare
 
 # Now you can use it like this:
@@ -143,7 +143,7 @@ chmod +x mdeclare
 **🐧 Ubuntu/Debian Users (Even Easier!):**
 ```bash
 # Download the package
-wget https://github.com/OUIsolutions/MDeclare/releases/download/0.0.3/MDeclare.deb
+wget https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.deb
 
 # Install it (you'll need to enter your password)
 sudo dpkg -i MDeclare.deb
@@ -156,9 +156,9 @@ mdeclare --help
 
 | 📁 **File** | 🎯 **Best For** | 📝 **Description** |
 |-------------|-----------------|-------------------|
-| [⚡ MDeclare.c](https://github.com/OUIsolutions/MDeclare/releases/download/0.0.3/MDeclare.c) | Developers who want to compile | Complete source code |
-| [📚 MDeclareApiOne.h](https://github.com/OUIsolutions/MDeclare/releases/download/0.0.3/MDeclareApiOne.h) | Use in your C programs | Full API library |
-| [📦 MDeclare.rpm](https://github.com/OUIsolutions/MDeclare/releases/download/0.0.3/MDeclare.rpm) | Fedora/RHEL/CentOS | RPM package |
+| [⚡ MDeclare.c](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.c) | Developers who want to compile | Complete source code |
+| [📚 MDeclareApiOne.h](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclareApiOne.h) | Use in your C programs | Full API library |
+| [📦 MDeclare.rpm](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.rpm) | Fedora/RHEL/CentOS | RPM package |
 
 ---
 
@@ -366,7 +366,7 @@ mdeclare functions.c -o functions.h
 **Download the API header file:**
 ```bash
 # Get the complete API (easiest way)
-curl -L https://github.com/OUIsolutions/MDeclare/releases/download/0.0.3/MDeclareApiOne.h -o MDeclareApiOne.h
+curl -L https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclareApiOne.h -o MDeclareApiOne.h
 ```
 
 ### 🎬 Simple Example (Transform a Single File!)
