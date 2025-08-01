@@ -3,4 +3,4 @@
 #include "../../imports/imports.api_dependencies.h"
 //silver_chain_scope_end
 
-char * transform_dir(const char *dir_path,bool include_path, const char *starts_with,const char *ends_with);
+char * mdeclare_transform_dir(const char *dir_path,bool include_path, const char *starts_with,const char *ends_with);

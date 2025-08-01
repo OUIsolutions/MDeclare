@@ -433,7 +433,7 @@ int main() {
     const char *ends_with = ".c";             // Filter: files ending with...
     
     // Process the entire directory! ✨
-    char *result = transform_dir(source_dir, include_path, starts_with, ends_with);
+    char *result = mdeclare_transform_dir(source_dir, include_path, starts_with, ends_with);
     
     if (result == NULL) {
         printf("❌ Oops! Something went wrong processing the directory!\n");
@@ -468,7 +468,7 @@ int main() {
 | 🔧 **Function** | 📝 **What It Does** | 💡 **Example** |
 |-----------------|-------------------|----------------|
 | `mdeclare_transform_content(content)` | Transform C code to header declarations | For single files or code strings |
-| `transform_dir(dir_path, include_path, starts_with, ends_with)` | Process entire directories | For batch processing multiple files |
+| `mdeclare_transform_dir(dir_path, include_path, starts_with, ends_with)` | Process entire directories | For batch processing multiple files |
 
 ### 🚨 Important Notes for Beginners:
 
