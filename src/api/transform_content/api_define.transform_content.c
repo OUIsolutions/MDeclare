@@ -33,7 +33,6 @@
         }
 
         if(inside_string){
-            if(current_char == '"'){
              inside_string = false;
             }
         }
@@ -51,13 +50,14 @@
         }
 
  
-        bool normal_scope =  !inside_string && !inside_char && !inside_comment && !inside_multiline_comment && !inside_preprocessor;
+        bool inside_code =  !inside_string && !inside_char && !inside_comment && !inside_multiline_comment && !inside_preprocessor;
 
-        if (normal_scope){
+        if (inside_code){
 
             if (current_char == '{'){
                 bracket_count++;
-            } else if (current_char == '}'){
+            }  
+            if(current_char == '}'){
                 bracket_count--;
             }
 
@@ -79,8 +79,8 @@
                 inside_preprocessor = true;
             } 
         }
-    
-        if(bracket_count == 0 && current_char != '}'){
+       
+        if(bracket_count == 0 && current_char != '}' ){
             CTextStack_format(final_content,"%c", current_char);
         }
         if(bracket_count == 0 && current_char == '}'){
