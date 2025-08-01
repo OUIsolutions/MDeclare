@@ -11,9 +11,14 @@ char * transform_dir(const char *dir_path, const char *output_path,const char *s
     for(int i =0; i < files->size; i++){
         char *current_file = files->strings[i];
         if(starts_with){
-            if(!dtw_starts_with(current_file, starts_with)){
+            DtwPath *path = newDtwPath(current_file);
+            char *pure_filename = DtwPath_get_full_name(path);
+            if(!dtw_starts_with(pure_filename, starts_with)){
+                DtwPath_free(path);
                 continue;
             }
+            DtwPath_free(path);
+
         }
         if(ends_with){
             if(!dtw_ends_with(current_file, ends_with)){
