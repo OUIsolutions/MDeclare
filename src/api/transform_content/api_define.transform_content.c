@@ -15,7 +15,7 @@
     bool inside_multiline_comment = false;
     bool inside_preprocessor = false;
     bool inside_macro = false;
-
+    
     for(int i =0; i < size;i++){
         char current_char = content[i];
 
@@ -35,12 +35,17 @@
         if(inside_string){
             if(current_char == '"'){
              inside_string = false;
+            CTextStack_format(final_content,"\"");
+            continue;
+
             }
         }
 
         if(inside_char){
             if(current_char == '\''){
                 inside_char = false;
+                CTextStack_format(final_content,"'");
+                continue;
             }
         }
 
