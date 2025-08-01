@@ -15,8 +15,18 @@
     bool inside_multiline_comment = false;
     bool inside_preprocessor = false;
     bool inside_macro = false;
+    int scape_count = 0;
     for(int i =0; i < size;i++){
         char current_char = content[i];
+        if(i > 0){
+            if(content[i - 1] == '\\'){
+                scape_count++;
+            } else {
+                scape_count = 0;
+            }
+        }
+
+        bool is_even = (scape_count % 2 == 0);
         
         if(inside_comment){
             if(current_char == '\n'){
@@ -31,18 +41,22 @@
         }
 
         if(inside_string){
-            if(current_char == '"' && i > 0 && content[i - 1] != '\\'){
+            if(current_char == '"' && is_even ){
              inside_string = false;
-            CTextStack_format(final_content,"\"");
+             if(bracket_count == 0){
+                CTextStack_format(final_content,"\"");
+             } 
             continue;
 
             }
         }
 
         if(inside_char){
-            if(current_char == '\'' && i > 0 && content[i - 1] != '\\'){
+            if(current_char == '\'' && is_even ){
                 inside_char = false;
-                CTextStack_format(final_content,"'");
+                if(bracket_count == 0){
+                    CTextStack_format(final_content,"'");
+                }
                 continue;
             }
         }
@@ -54,8 +68,13 @@
         }
 
  
-        bool inside_code =  !inside_string && !inside_char && !inside_comment && !inside_multiline_comment && !inside_preprocessor;
-
+        bool inside_code = (!inside_string && !inside_char && !inside_comment && !inside_multiline_comment && !inside_preprocessor);
+        /*
+        // Print all values
+        printf("char: '%c', bracket: %d, string: %d, char: %d, comment: %d, multiline: %d, preproc: %d, macro: %d, scape: %d, code: %d\n", 
+               current_char, bracket_count, inside_string, inside_char, inside_comment, inside_multiline_comment, 
+               inside_preprocessor, inside_macro, scape_count, inside_code);
+        */
         if (inside_code){
 
             if (current_char == '{'){
@@ -82,14 +101,18 @@
             if(current_char == '#' ){
                 inside_preprocessor = true;
             } 
+   
         }
-       
+
+
         if(bracket_count == 0 && current_char != '}' ){
             CTextStack_format(final_content,"%c", current_char);
         }
         if(bracket_count == 0 && current_char == '}'){
             CTextStack_format(final_content,";");
         }
+
+      
 
     }
 
