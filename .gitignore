@@ -1,0 +1,7 @@
+dependencies
+src/imports
+release
+a.out
+exemple.c
+output.c
+.vscode

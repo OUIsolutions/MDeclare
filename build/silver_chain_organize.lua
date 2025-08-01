@@ -10,8 +10,8 @@ function silver_chain_organize()
         project_short_cut = "MDeclare",
         tags = { 
             "api_dependencies",
-        "api_const",
-        "api_type",
+       -- "api_const",
+       -- "api_type",
         "api_declare",
         "api_define",
         "cli_dependencies",
