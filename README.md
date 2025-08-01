@@ -46,6 +46,26 @@ int divide(int a, int b) ;
 mdeclare src/api/transform_content/api_define.transform_content.c  -o teste.c
 ```
 
+## Api Usage
+transform a file 
+```c
+    // transform a file 
+    const char *file_path = "void test(){\n"
+                            "    printf(\"Hello, World!\\n\");\n"
+                            "}\n";
+    char *result = mdeclare_transform_content(file_path);
+```
+
+transform a dir 
+```c
+    // transform a dir 
+    const char *dir_path = "src/api/transform_content";
+    const char *output = "target.h";
+    const char *starts_with = NULL;
+    const char *ends_with = ".c";
+    char *result = transform_dir(dir_path, output, starts_with, ends_with);
+```
+
 
 
 ### Build from scrath
