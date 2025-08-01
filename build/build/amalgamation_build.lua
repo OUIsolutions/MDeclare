@@ -7,18 +7,18 @@ function amalgamation_build()
     silver_chain_organize()
 
 
-    local runtime = darwin.MDeclare.generate_amalgamation("src/main.c")
+    local runtime = darwin.camalgamator.generate_amalgamation("src/main.c")
     
   
     darwin.dtw.write_file("release/MDeclare.c", runtime)
 
-    local api_one = darwin.MDeclare.generate_amalgamation("src/imports/imports.api_define.h")
+    local api_one = darwin.camalgamator.generate_amalgamation("src/imports/imports.api_define.h")
     darwin.dtw.write_file("release/MDeclareApiOne.h", api_one)
 
-    local max_content = darwin.MDeclare.ONE_MB * 10
+    local max_content = darwin.camalgamator.ONE_MB * 10
     local max_recursion = 100
 
-    local dependencie_not_included = darwin.MDeclare.generate_amalgamation_with_callback(
+    local dependencie_not_included = darwin.camalgamator.generate_amalgamation_with_callback(
         "src/imports/imports.api_define.h",
     function(import, path)
         if darwin.dtw.ends_with(import,"dependencies.h") then
@@ -29,7 +29,7 @@ function amalgamation_build()
     max_content,
     max_recursion
     )    
-    darwin.dtw.write_file("release/MDeclareApiNoDependenciesIncluded.h ", dependencie_not_included)
+    darwin.dtw.write_file("release/CAmalgamatorApiNoDependenciesIncluded.h ", dependencie_not_included)
 
 
 end
