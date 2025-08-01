@@ -29,7 +29,7 @@ function amalgamation_build()
     max_content,
     max_recursion
     )    
-    darwin.dtw.write_file("release/CAmalgamatorApiNoDependenciesIncluded.h ", dependencie_not_included)
+    darwin.dtw.write_file("release/MDeclareApiNoDependenciesIncluded.h ", dependencie_not_included)
 
 
 end
