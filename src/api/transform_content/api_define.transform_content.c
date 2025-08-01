@@ -33,6 +33,7 @@
         }
 
         if(inside_string){
+            if(current_char == '"'){
              inside_string = false;
             }
         }
