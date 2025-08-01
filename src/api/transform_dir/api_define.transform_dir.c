@@ -20,8 +20,10 @@ char * transform_dir(const char *dir_path, const char *output_path,const char *s
                 continue;
             }
         }
-        CTextStack_format(final_content, "\\%s\n", current_file);
-        char *content = dtw_load_string_file_content(current_file);
+        CTextStack_format(final_content, "//%s\n", current_file);
+        char *concatenated = dtw_concat_path(dir_path, current_file);
+        char *content = dtw_load_string_file_content(concatenated);
+        free(concatenated);
         if(content == NULL){
             fprintf(stderr, "Failed to load content from '%s'.\n", current_file);
             continue;

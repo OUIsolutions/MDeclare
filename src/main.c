@@ -13,6 +13,18 @@ int main(int argc, char *argv[]){
         fprintf(stderr,"No entry point provided.\n");
         return 1;
     }
+
+    if(strcmp(entrie,"version") == 0){
+        printf("MDeclare  1.0.0\n");
+        return 0;
+    }
+    const char *VERSION[] = {"version","v"};
+    if(CArgvParse_is_flags_present(&args,VERSION,sizeof(VERSION)/sizeof(char*)) ){
+        printf("MDeclare 1.0.0\n");
+        return 1;
+    }
+
+
     int entrie_type = dtw_entity_type(entrie);
     if(entrie_type == DTW_NOT_FOUND){
         fprintf(stderr,"Entrie point '%s' not found.\n",entrie);
