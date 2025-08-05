@@ -15,7 +15,7 @@ int main(int argc, char *argv[]){
     }
 
     if(strcmp(entrie,"version") == 0){
-        printf("MDeclare  1.0.0\n");
+        printf("MDeclare  2.0.0\n");
         return 0;
     }
     const char *VERSION[] = {"version","v"};
