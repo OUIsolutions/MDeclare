@@ -486,7 +486,7 @@ int main() {
 
 **You'll need these tools installed:**
 
-1. **🦄 [Darwin](https://github.com/OUIsolutions/Darwin) Build System** (Version 0.7.0+)
+1. **🦄 [Darwin](https://github.com/OUIsolutions/Darwin) Build System** (Version 0.8.0+)
 2. **🐳 Docker** OR **🫖 Podman** (for containerized builds)
 3. **🐧 Linux Environment** (recommended)
 
@@ -494,7 +494,7 @@ int main() {
 
 ```bash
 # Install Darwin build system in one command
-curl -L https://github.com/OUIsolutions/Darwin/releases/download/0.7.0/darwin.out -o darwin.out && sudo chmod +x darwin.out && sudo mv darwin.out /usr/bin/darwin
+curl -L https://github.com/OUIsolutions/Darwin/releases/download/0.8.0/darwin.out -o darwin.out && sudo chmod +x darwin.out && sudo mv darwin.out /usr/bin/darwin
 ```
 
 ### 📁 Clone and Build

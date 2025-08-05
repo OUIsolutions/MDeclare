@@ -6,3 +6,4 @@ exemple.c
 output.c
 .vscode
 .cache
+api_declare.all.h
