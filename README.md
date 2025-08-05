@@ -118,10 +118,10 @@ int divide(int a, int b);
 
 | 🖥️ **Platform** | 📦 **Download** | 📝 **Description** |
 |------------------|----------------|-------------------|
-| 🐧 **Linux** | [MDeclare.out](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.out) | Ready-to-run executable |
-| 🪟 **Windows 32-bit** | [MDeclarei32.exe](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclarei32.exe) | Windows executable |
-| � **Ubuntu/Debian** | [MDeclare.deb](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.deb) | DEB package |
-| � **RHEL/Fedora** | [MDeclare.rpm](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.rpm) | RPM package |
+| 🐧 **Linux** | [MDeclare.out](https://github.com/OUIsolutions/MDeclare/releases/download/0.2.0/MDeclare.out) | Ready-to-run executable |
+| 🪟 **Windows 32-bit** | [MDeclarei32.exe](https://github.com/OUIsolutions/MDeclare/releases/download/0.2.0/MDeclarei32.exe) | Windows executable |
+| � **Ubuntu/Debian** | [MDeclare.deb](https://github.com/OUIsolutions/MDeclare/releases/download/0.2.0/MDeclare.deb) | DEB package |
+| � **RHEL/Fedora** | [MDeclare.rpm](https://github.com/OUIsolutions/MDeclare/releases/download/0.2.0/MDeclare.rpm) | RPM package |
 
 </div>
 
@@ -129,22 +129,22 @@ int divide(int a, int b);
 
 | 📁 **File** | 🎯 **Purpose** |
 |-------------|---------------|
-| [⚡ MDeclare.c](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.c) | Single-file source code |
-| [📚 MDeclareApiOne.c](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclareApiOne.c) | API full for integration |
-| [🔧 MDeclareApiNoDependenciesIncluded.h](https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclareApiNoDependenciesIncluded.h) | Amalgamator API |
+| [⚡ MDeclare.c](https://github.com/OUIsolutions/MDeclare/releases/download/0.2.0/MDeclare.c) | Single-file source code |
+| [📚 MDeclareApiOne.c](https://github.com/OUIsolutions/MDeclare/releases/download/0.2.0/MDeclareApiOne.c) | API full for integration |
+| [🔧 MDeclareApiNoDependenciesIncluded.h](https://github.com/OUIsolutions/MDeclare/releases/download/0.2.0/MDeclareApiNoDependenciesIncluded.h) | Amalgamator API |
 
 ### ⚡ Quick Installation
 
 **Linux:**
 ```bash
 # Download and make executable
-curl -L https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.out -o mdeclare && chmod +x mdeclare
+curl -L https://github.com/OUIsolutions/MDeclare/releases/download/0.2.0/MDeclare.out -o mdeclare && chmod +x mdeclare
 ```
 
 **Ubuntu/Debian:**
 ```bash
 # Install DEB package
-wget https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclare.deb && sudo dpkg -i MDeclare.deb
+wget https://github.com/OUIsolutions/MDeclare/releases/download/0.2.0/MDeclare.deb && sudo dpkg -i MDeclare.deb
 ```
 
 ---
@@ -353,7 +353,7 @@ mdeclare functions.c -o functions.h
 **Download the API header file:**
 ```bash
 # Get the complete API (easiest way)
-curl -L https://github.com/OUIsolutions/MDeclare/releases/download/0.1.0/MDeclareApiOne.h -o MDeclareApiOne.c
+curl -L https://github.com/OUIsolutions/MDeclare/releases/download/0.2.0/MDeclareApiOne.h -o MDeclareApiOne.c
 ```
 
 ### 🎬 Simple Example (Transform a Single File!)
